@@ -3,7 +3,7 @@
 
 // CODE
 
-const fs = require("fs");
+const fs = require("fzx");
 const saveFile = "savedpos.txt";
 
 mp.events.addCommand("save", (player, name = "No name") => {
