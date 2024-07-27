@@ -24,13 +24,13 @@ mp.events.addCommand("save", (player, name = "No name") => {
 const door1Colshape = mp.colshapes.newSphere(434.6922912597656, -981.991455078125, 30.713016510009766, 2, 0);
 
 function playerEnterColshape(player, shape) {
-    if (shape === door1Colshape) { // Используем строгое равенство
+    if (shape === door1Colshape) { // Используем шейпы с вкл коллизией
         player.call('client:ColshapeEnterDoor', ['closeDoor1']);
     }
 }
 
 function playerExitColshape(player, shape) {
-    if (shape === door1Colshape) { // Используем строгое равенство
+    if (shape === door1Colshape) { // Используем шейпы когда игрок стоит рядом с дверью
         player.call('client:ColshapeExitDoor', ['closeDoor1']);
     }
 }
